@@ -1,0 +1,24 @@
+{
+  "name": "BaiMai Herbs & Wellness",
+  "short_name": "BaiMai",
+  "description": "Koh Phangan kratom and wellness shop with local delivery, shop directions and wholesale information.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#041d18",
+  "theme_color": "#041d18",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
