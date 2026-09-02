@@ -3,37 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      if (window.location.protocol !== "file:") {
+        document.write('<base href="/" />');
+      }
+    </script>
     <meta name="theme-color" content="#041d18" />
-    <meta name="description" content="BaiMai Herbs & Wellness is a Koh Phangan kratom and wellness shop offering local delivery, shop directions and wholesale information across Thailand." />
-    <meta name="keywords" content="BaiMai Herbs Wellness, BaiMai Koh Phangan, kratom Koh Phangan, kratom shop Koh Phangan, kratom delivery Koh Phangan, herb shop Koh Phangan, wellness products Thailand" />
+    <meta name="description" content="BaiMai Herbs & Wellness is a Koh Phangan shop in Hin Kong offering kratom in store, plus eligible wellness products for local delivery, including functional mushrooms, electrolytes and probiotics." />
+    <meta name="keywords" content="BaiMai Herbs Wellness, BaiMai Koh Phangan, kratom Koh Phangan, kratom shop Koh Phangan, functional mushrooms Koh Phangan, electrolytes Koh Phangan, wellness shop Koh Phangan" />
     <meta name="robots" content="index, follow" />
     <meta name="geo.region" content="TH-84" />
     <meta name="geo.placename" content="Koh Phangan, Surat Thani, Thailand" />
     <meta name="author" content="BaiMai Herbs & Wellness" />
     <link rel="canonical" href="https://baimaiherbs.com/" />
+    <link rel="preload" as="image" href="/shop-front-view.jpg" />
+    <script>
+      if (window.location.protocol === "file:" && !window.location.pathname.includes("/dist/")) {
+        window.location.replace("./dist/index.html");
+      }
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="BaiMai Herbs & Wellness" />
-    <meta property="og:title" content="BaiMai Herbs & Wellness | Kratom Shop & Delivery Koh Phangan" />
-    <meta property="og:description" content="Koh Phangan kratom and wellness shop with local delivery, shop directions and wholesale information across Thailand." />
+    <meta property="og:title" content="BaiMai Herbs & Wellness | Kratom Shop & Eligible Wellness Delivery" />
+    <meta property="og:description" content="Koh Phangan shop with kratom available in store, plus eligible wellness products for local delivery through KPG Delivery." />
     <meta property="og:url" content="https://baimaiherbs.com/" />
     <meta property="og:image" content="https://baimaiherbs.com/baimai-search-preview.png" />
     <meta property="og:image:alt" content="BaiMai Herbs & Wellness green and gold botanical brand preview" />
     <meta property="og:locale" content="en_TH" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BaiMai Herbs & Wellness | Kratom Shop & Delivery Koh Phangan" />
-    <meta name="twitter:description" content="Koh Phangan kratom and wellness shop with local delivery, shop directions and wholesale information across Thailand." />
+    <meta name="twitter:title" content="BaiMai Herbs & Wellness | Kratom Shop & Eligible Wellness Delivery" />
+    <meta name="twitter:description" content="Koh Phangan shop with kratom available in store, plus eligible wellness products for local delivery through KPG Delivery." />
     <meta name="twitter:image" content="https://baimaiherbs.com/baimai-search-preview.png" />
     <meta name="twitter:image:alt" content="BaiMai Herbs & Wellness green and gold botanical brand preview" />
 
-    <title>BaiMai Herbs & Wellness | Kratom Shop & Delivery Koh Phangan</title>
-    <link rel="icon" href="./favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="48x48" href="./favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
+    <title>BaiMai Herbs & Wellness | Kratom Shop & Eligible Wellness Delivery</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -43,9 +54,8 @@
         "alternateName": "BaiMai",
         "url": "https://baimaiherbs.com/",
         "image": "https://baimaiherbs.com/baimai-logo.png",
-        "description": "BaiMai Herbs & Wellness is a Koh Phangan kratom and wellness shop offering local delivery, shop directions and wholesale information across Thailand.",
+        "description": "BaiMai Herbs & Wellness is a Koh Phangan shop in Hin Kong offering kratom in store and eligible wellness products for local delivery.",
         "telephone": "+66656142725",
-        "email": "baimaiwholesale@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Koh Phangan",
@@ -53,12 +63,22 @@
           "addressCountry": "TH"
         },
         "areaServed": "Koh Phangan, Thailand",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "12:30",
+            "closes": "21:00"
+          }
+        ],
         "priceRange": "$$",
         "knowsAbout": [
           "Kratom products",
           "Wellness products",
           "Koh Phangan delivery",
-          "Thailand wholesale"
+          "Functional mushrooms",
+          "Electrolytes",
+          "Wellness supplements"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -67,17 +87,12 @@
             {
               "@type": "Offer",
               "name": "Koh Phangan delivery",
-              "description": "Order BaiMai products for local delivery across Koh Phangan."
+              "description": "Order eligible BaiMai wellness products for local delivery across Koh Phangan. Kratom products are available in store only."
             },
             {
               "@type": "Offer",
               "name": "Visit BaiMai Herbs & Wellness",
               "description": "Get directions to the BaiMai Herbs & Wellness shop in Koh Phangan."
-            },
-            {
-              "@type": "Offer",
-              "name": "BaiMai Wholesale",
-              "description": "Wholesale information for selected kratom and wellness products across Thailand."
             }
           ]
         },
@@ -93,10 +108,9 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="./assets/index-bh7Sh0jY.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B5KW17Ol.css">
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
