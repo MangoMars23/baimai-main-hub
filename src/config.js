@@ -1,10 +1,10 @@
 // Shared business hours keep public copy and structured data consistent.
 export const businessHours = {
-  compact: "Mon-Sat 12:30-21:00 • Sunday closed",
-  visitEyebrow: "HIN KONG • MON-SAT 12:30-21:00",
+  compact: "Mon-Sat 14:00-21:00 • Sunday closed",
+  visitEyebrow: "HIN KONG • MON-SAT 14:00-21:00",
   closedLabel: "Sunday closed",
   openDays: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-  opens: "12:30",
+  opens: "14:00",
   closes: "21:00",
 };
 

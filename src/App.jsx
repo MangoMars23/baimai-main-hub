@@ -451,7 +451,7 @@ function isExternal(href) {
   return href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:");
 }
 
-function TrackLink({ href, event, payload, className, children, ...props }) {
+function TrackLink({ href, event, payload, className, children, external: _external, ...props }) {
   const finalHref = isExternal(href) || href.startsWith("#") ? href : withAttribution(href);
   const external = isExternal(finalHref);
 
@@ -832,6 +832,20 @@ export function App() {
               </TrackLink>
             </div>
             <p className="utility-line">{businessHours.compact} • Hin Kong</p>
+            <div className="hero-proof" aria-label="BaiMai highlights">
+              <span>
+                <strong>Local shop</strong>
+                <small>Hin Kong, Koh Phangan</small>
+              </span>
+              <span>
+                <strong>Curated range</strong>
+                <small>Wellness-led essentials</small>
+              </span>
+              <span>
+                <strong>Island delivery</strong>
+                <small>Eligible products only</small>
+              </span>
+            </div>
           </div>
           <figure className="hero-photo">
             <img
@@ -841,6 +855,10 @@ export function App() {
               width="960"
               height="1280"
             />
+            <figcaption className="hero-photo-caption">
+              <strong>Find your everyday reset</strong>
+              <span>Visit BaiMai in Hin Kong</span>
+            </figcaption>
           </figure>
         </section>
 
@@ -883,6 +901,10 @@ export function App() {
           <div className="help-copy">
             <p className="prompt-kicker">Can’t find what you’re looking for?</p>
             <p>Chat with BaiMai and we’ll help you find the right product or delivery option.</p>
+            <p className="assistant-disclosure">
+              BaiMai’s AI assistant uses <a href="https://agentplace.io/privacy-policy" target="_blank" rel="noreferrer">Agentplace</a>.
+              Your messages are processed by this third-party service. Please don’t share payment information or sensitive personal or medical details.
+            </p>
           </div>
 
           <nav className="social-links" aria-label="BaiMai social links">
