@@ -1,18 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight,
-  FacebookLogo,
-  InstagramLogo,
+  ChatCircle,
   MapPin,
   Package,
   ShoppingBagOpen,
   Storefront,
-  WhatsappLogo,
 } from "@phosphor-icons/react";
 import { businessHours, links } from "./config";
 import { resolveQrRedirect, trackEvent, withAttribution } from "./qr";
 
 const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+const agentplaceUrl = "https://aptuewkywkvb.run.agentplace.io/";
 
 const categoryMeta = [
   {
@@ -407,11 +406,6 @@ const destinations = [
     Icon: Package,
     event: "delivery_click",
   },
-];
-
-const socialLinks = [
-  { label: "Instagram", href: links.instagram, Icon: InstagramLogo, event: "contact_click" },
-  { label: "Facebook", href: links.facebook, Icon: FacebookLogo, event: "contact_click" },
 ];
 
 const pageMeta = {
@@ -897,30 +891,6 @@ export function App() {
           </TrackLink>
         </section>
 
-        <section className="secondary-area" id="contact" aria-label="BaiMai contact and social links">
-          <div className="help-copy">
-            <p className="prompt-kicker">Can’t find what you’re looking for?</p>
-            <p>Chat with BaiMai and we’ll help you find the right product or delivery option.</p>
-            <p className="assistant-disclosure">
-              BaiMai’s AI assistant uses <a href="https://agentplace.io/privacy-policy" target="_blank" rel="noreferrer">Agentplace</a>.
-              Your messages are processed by this third-party service. Please don’t share payment information or sensitive personal or medical details.
-            </p>
-          </div>
-
-          <nav className="social-links" aria-label="BaiMai social links">
-            <TrackLink className="whatsapp-primary" href={links.whatsapp} event="contact_click" payload={{ channel: "WhatsApp" }} aria-label="Chat with BaiMai on WhatsApp">
-              <WhatsappLogo size={19} weight="fill" aria-hidden="true" />
-              <span>WhatsApp BaiMai</span>
-            </TrackLink>
-            {socialLinks.map(({ label, href, Icon, event }) => (
-              <TrackLink key={label} href={href} event={event} payload={{ channel: label }} aria-label={label}>
-                <Icon size={19} weight="regular" aria-hidden="true" />
-                <span>{label}</span>
-              </TrackLink>
-            ))}
-          </nav>
-
-        </section>
       </main>
 
       <footer>
@@ -933,7 +903,21 @@ export function App() {
           <a href={links.facebook} target="_blank" rel="noreferrer">Facebook</a>
           <a href={links.whatsapp} target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
+        <small className="assistant-disclosure-footer">
+          AI assistant powered by <a href="https://agentplace.io/privacy-policy" target="_blank" rel="noreferrer">Agentplace</a>. Please don’t share sensitive personal, medical or payment information.
+        </small>
       </footer>
+
+      <a
+        className="assistant-launcher"
+        href={agentplaceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ask BaiMai AI — open the BaiMai AI assistant in a new tab"
+      >
+        <ChatCircle size={19} weight="fill" aria-hidden="true" />
+        <span>Ask BaiMai AI</span>
+      </a>
 
       <MobileActionBar />
     </div>
